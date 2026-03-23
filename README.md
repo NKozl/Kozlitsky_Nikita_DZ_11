@@ -3,7 +3,7 @@
 
 ## Структура проекта
 ```text
-ib_python_hw11/
+Kozlitsky_Nikita_DZ_11/
 ├── analyze_logs.py
 ├── README.md
 ├── requirements.txt
