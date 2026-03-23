@@ -1,0 +1,12 @@
+Всего записей: 38
+Подозрительных WinEventLog: 28
+Подозрительных DNS: 2
+
+Топ подозрительных категорий:
+- WinEventLog: privilege escalation / user rights changed: 12
+- WinEventLog: suspicious process termination: 10
+- WinEventLog: remote network logon: 3
+- WinEventLog: suspicious process creation: 2
+- DNS: possible C2 / beaconing: 1
+- DNS: random-looking or rare domain: 1
+- WinEventLog: suspicious object access: 1

@@ -1,0 +1,3 @@
+﻿timestamp,host,QueryName,QueryType,ClientIP,ResponseCode,SuspiciousCategory,SuspiciousLabel,SuspiciousReason,body
+2016-08-29 10:17:12,wkstn01.waynecorpinc.local,ajd92jd9d.com,A,192.168.1.77,NOERROR,DNS: random-looking or rare domain,DNS: Random-looking domain (ajd92jd9d.com),Домен выглядит случайным или DGA-подобным.,DNS query executed for ajd92jd9d.com type A from 192.168.1.77
+2016-08-29 10:20:30,wkstn02.waynecorpinc.local,c2.maliciousdomain.com,A,192.168.1.88,NOERROR,DNS: possible C2 / beaconing,DNS: Possible C2/beaconing (c2.maliciousdomain.com),Похоже на C2-активность или DNS-beaconing.,DNS beaconing suspected for c2.maliciousdomain.com

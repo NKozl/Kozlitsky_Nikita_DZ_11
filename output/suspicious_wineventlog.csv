@@ -1,0 +1,668 @@
+﻿timestamp,host,EventCode,TaskCategory,process_name,Process_Command_Line,Logon_Type,Authentication_Package,Source_Network_Address,Exit_Status,SuspiciousCategory,SuspiciousLabel,SuspiciousReason,body
+2016-08-28 22:02:17,we8382srv.waynecorpinc.local,4624,Logon,-,,3,Kerberos,fe80::a971:d247:426d:612c,,WinEventLog: remote network logon,4624: Remote network logon (Kerberos),Сетевой вход типа 3 может быть признаком удалённой активности.,"An account was successfully logged on.
+
+Subject:
+	Security ID:		NULL SID
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we8382srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x1E42C53
+	Logon GUID:		{07CD1F19-BEA5-63D0-FEC5-962937A38031}
+
+Process Information:
+	Process ID:		0x0
+	Process Name:		-
+
+Network Information:
+	Workstation Name:	
+	Source Network Address:	fe80::a971:d247:426d:612c
+	Source Port:		51956
+
+Detailed Authentication Information:
+	Logon Process:		Kerberos
+	Authentication Package:	Kerberos
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+2016-08-28 22:02:17,we8460srv.waynecorpinc.local,4656,File System,C:\Windows\System32\cleanmgr.exe,,,,,,WinEventLog: suspicious object access,4656: Object handle request (cleanmgr.exe),Запрос дескриптора к объекту файловой системы требует дополнительной проверки.,"A handle to an object was requested.
+
+Subject:
+	Security ID:		WAYNECORPINC\Lara.Culbreth
+	Account Name:		Lara.Culbreth
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x4ECABD
+
+Object:
+	Object Server:		Security
+	Object Type:		File
+	Object Name:		C:\Windows\diagnostics\system\Apps
+	Handle ID:		0x518
+	Resource Attributes:	-
+
+Process Information:
+	Process ID:		0x348
+	Process Name:		C:\Windows\System32\cleanmgr.exe
+
+Access Request Information:
+	Transaction ID:		{00000000-0000-0000-0000-000000000000}
+	Accesses:		SYNCHRONIZE
+				ReadData (or ListDirectory)
+				
+	Access Reasons:		SYNCHRONIZE:	Granted by	D:(A;;0x1200a9;;;BU)
+				ReadData (or ListDirectory):	Granted by	D:(A;;0x1200a9;;;BU)
+				
+	Access Mask:		0x100001
+	Privileges Used for Access Check:	-
+	Restricted SID Count:	0"
+2016-08-28 22:02:17,we4404srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-regmon.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-regmon.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we4404srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0xf20
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-regmon.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:17,we8153srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-winprintmon.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-winprintmon.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we8153srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0x72c
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-winprintmon.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:17,we6867srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-MonitorNoHandle.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we6867srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0x244
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:17,we5364srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-powershell.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we5364srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0xa5c
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:17,we8018srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\System32\svchost.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (svchost.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we8018srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we8018srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x3b8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Enabled Privileges:
+			SeAssignPrimaryTokenPrivilege
+			SeIncreaseQuotaPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeSystemtimePrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeShutdownPrivilege
+			SeSystemEnvironmentPrivilege
+			SeUndockPrivilege
+			SeManageVolumePrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:17,we7075srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we7075srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we7075srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:17,we4837srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\System32\svchost.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (svchost.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we4837srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we4837srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x3b8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Enabled Privileges:
+			SeAssignPrimaryTokenPrivilege
+			SeIncreaseQuotaPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeSystemtimePrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeShutdownPrivilege
+			SeSystemEnvironmentPrivilege
+			SeUndockPrivilege
+			SeManageVolumePrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:17,we1159srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we1159srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we1159srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:17,we8670srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we8670srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we8670srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:17,we7887srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we7887srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we7887srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:18,we4664srv.waynecorpinc.local,4624,Logon,-,,3,Kerberos,fe80::a971:d247:426d:612c,,WinEventLog: remote network logon,4624: Remote network logon (Kerberos),Сетевой вход типа 3 может быть признаком удалённой активности.,"An account was successfully logged on.
+
+Subject:
+	Security ID:		NULL SID
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Impersonation Level:		Impersonation
+
+New Logon:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we4664srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x1966685
+	Logon GUID:		{E070CA61-40F8-8FD4-3235-15A94E6DF787}
+
+Process Information:
+	Process ID:		0x0
+	Process Name:		-
+
+Network Information:
+	Workstation Name:	
+	Source Network Address:	fe80::a971:d247:426d:612c
+	Source Port:		49852
+
+Detailed Authentication Information:
+	Logon Process:		Kerberos
+	Authentication Package:	Kerberos
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+2016-08-28 22:02:18,we9054srv.waynecorpinc.local,4688,Process Creation,C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe,"""C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe"" --ps2",,,,,WinEventLog: suspicious process creation,4688: New process created (splunk-powershell.exe),Запуск PowerShell или скрытого сервисного процесса требует проверки.,"A new process has been created.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9054srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	New Process ID:		0xd8c
+	New Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe
+	Token Elevation Type:	TokenElevationTypeDefault (1)
+	Creator Process ID:	0xc24
+	Process Command Line:	""C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe"" --ps2
+
+Token Elevation Type indicates the type of token that was assigned to the new process in accordance with User Account Control policy.
+
+Type 1 is a full token with no privileges removed or groups disabled.  A full token is only used if User Account Control is disabled or if the user is the built-in Administrator account or a service account.
+
+Type 2 is an elevated token with no privileges removed or groups disabled.  An elevated token is used when User Account Control is enabled and the user chooses to start the program using Run as administrator.  An elevated token is also used when an application is configured to always require administrative privilege or to always require maximum privilege, and the user is a member of the Administrators group.
+
+Type 3 is a limited token with administrative privileges removed and administrative groups disabled.  The limited token is used when User Account Control is enabled, the application does not require administrative privilege, and the user does not choose to start the program using Run as administrator."
+2016-08-28 22:02:18,we6908srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-winprintmon.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-winprintmon.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we6908srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0x7e0
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-winprintmon.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:18,we2813srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-admon.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-admon.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we2813srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0xcc0
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-admon.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:18,we9390srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9390srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9390srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:19,we5156srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-powershell.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we5156srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0xbb8
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:19,we6406srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-powershell.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we6406srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0xa28
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:19,we9390srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9390srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9390srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:20,we9028srv.waynecorpinc.local,4624,Logon,-,,3,Kerberos,fe80::a971:d247:426d:612c,,WinEventLog: remote network logon,4624: Remote network logon (Kerberos),Сетевой вход типа 3 может быть признаком удалённой активности.,"An account was successfully logged on.
+
+Subject:
+	Security ID:		NULL SID
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Logon Type:			3
+
+Impersonation Level:		Delegation
+
+New Logon:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9028srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x15D68DA
+	Logon GUID:		{CCFDB956-5500-C439-66AC-A2657C632FF9}
+
+Process Information:
+	Process ID:		0x0
+	Process Name:		-
+
+Network Information:
+	Workstation Name:	
+	Source Network Address:	fe80::a971:d247:426d:612c
+	Source Port:		64654
+
+Detailed Authentication Information:
+	Logon Process:		Kerberos
+	Authentication Package:	Kerberos
+	Transited Services:	-
+	Package Name (NTLM only):	-
+	Key Length:		0
+
+This event is generated when a logon session is created. It is generated on the computer that was accessed.
+
+The subject fields indicate the account on the local system which requested the logon. This is most commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+
+The logon type field indicates the kind of logon that occurred. The most common types are 2 (interactive) and 3 (network).
+
+The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was logged on.
+
+The network fields indicate where a remote logon request originated. Workstation name is not always available and may be left blank in some cases.
+
+The impersonation level field indicates the extent to which a process in the logon session can impersonate.
+
+The authentication information fields provide detailed information about this specific logon request.
+	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+	- Transited services indicate which intermediate services have participated in this logon request.
+	- Package name indicates which sub-protocol was used among the NTLM protocols.
+	- Key length indicates the length of the generated session key. This will be 0 if no session key was requested."
+2016-08-28 22:02:20,we5689srv.waynecorpinc.local,4688,Process Creation,C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe,"""C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe""",,,,,WinEventLog: suspicious process creation,4688: New process created (splunk-MonitorNoHandle.exe),Запуск PowerShell или скрытого сервисного процесса требует проверки.,"A new process has been created.
+
+Creator Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we5689srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Subject:
+	Security ID:		NULL SID
+	Account Name:		-
+	Account Domain:		-
+	Logon ID:		0x0
+
+Process Information:
+	New Process ID:		0x109c
+	New Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe
+	Token Elevation Type:	%%1936
+	Mandatory Label:		Mandatory Label\System Mandatory Level
+	Creator Process ID:	0x1b0
+	Creator Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunkd.exe
+	Process Command Line:	""C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe""
+
+Token Elevation Type indicates the type of token that was assigned to the new process in accordance with User Account Control policy.
+
+Type 1 is a full token with no privileges removed or groups disabled.  A full token is only used if User Account Control is disabled or if the user is the built-in Administrator account or a service account.
+
+Type 2 is an elevated token with no privileges removed or groups disabled.  An elevated token is used when User Account Control is enabled and the user chooses to start the program using Run as administrator.  An elevated token is also used when an application is configured to always require administrative privilege or to always require maximum privilege, and the user is a member of the Administrators group.
+
+Type 3 is a limited token with administrative privileges removed and administrative groups disabled.  The limited token is used when User Account Control is enabled, the application does not require administrative privilege, and the user does not choose to start the program using Run as administrator."
+2016-08-28 22:02:20,we7127srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-powershell.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we7127srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0x620
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe
+	Exit Status:	0x1"
+2016-08-28 22:02:20,we5878srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\System32\svchost.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (svchost.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we5878srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we5878srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x3b8
+	Process Name:		C:\Windows\System32\svchost.exe
+
+Enabled Privileges:
+			SeAssignPrimaryTokenPrivilege
+			SeIncreaseQuotaPrivilege
+			SeSecurityPrivilege
+			SeTakeOwnershipPrivilege
+			SeLoadDriverPrivilege
+			SeSystemtimePrivilege
+			SeBackupPrivilege
+			SeRestorePrivilege
+			SeShutdownPrivilege
+			SeSystemEnvironmentPrivilege
+			SeUndockPrivilege
+			SeManageVolumePrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:20,we3997srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we3997srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we3997srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:20,we9269srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9269srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we9269srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:20,we1662srv.waynecorpinc.local,4703,Authorization Policy Change,C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe,,,,,,WinEventLog: privilege escalation / user rights changed,4703: User right adjusted (TiWorker.exe),Возможная эскалация привилегий: изменены пользовательские права.,"A user right was adjusted.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we1662srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Target Account:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we1662srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:		0x15c4
+	Process Name:		C:\Windows\WinSxS\amd64_microsoft-windows-servicingstack_31bf3856ad364e35_10.0.10586.486_none_7640e086266ea227\TiWorker.exe
+
+Enabled Privileges:
+			SeSecurityPrivilege
+
+Disabled Privileges:
+			-"
+2016-08-28 22:02:21,we1159srv.waynecorpinc.local,4689,Process Termination,C:\Program Files\SplunkUniversalForwarder\bin\splunk-regmon.exe,,,,,0x1,WinEventLog: suspicious process termination,"4689: Process exited (splunk-regmon.exe, exit 0x1)",Завершение сервисного процесса с кодом 0x1 требует проверки.,"A process has exited.
+
+Subject:
+	Security ID:		NT AUTHORITY\SYSTEM
+	Account Name:		we1159srv$
+	Account Domain:		WAYNECORPINC
+	Logon ID:		0x3E7
+
+Process Information:
+	Process ID:	0x13cc
+	Process Name:	C:\Program Files\SplunkUniversalForwarder\bin\splunk-regmon.exe
+	Exit Status:	0x1"
